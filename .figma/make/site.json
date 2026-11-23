@@ -1,0 +1,10 @@
+{
+  "description": "Showcase your work with a premium portfolio website featuring modern design, smooth animations, and responsive layouts tailored for creative professionals.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
