@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as THREE from "three";
 import type { Swiper as SwiperInstance } from "swiper";
 import { FreeMode } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react"; 
+import { Swiper, SwiperSlide } from "swiper/react";
 import ParticlePortrait from "./components/ParticlePortrait.tsx";
 import {
   ArrowDownRight,
@@ -153,13 +153,28 @@ function Header() {
           </a>
         </nav>
         <div className="social-links">
-          <a href="#behance" aria-label="Behance">
+          <a
+            href="https://www.behance.net/jordannare4f81"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Behance"
+          >
             Bē
           </a>
-          <a href="#instagram" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/designar21/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
             <InstagramIcon />
           </a>
-          <a href="#linkedin" aria-label="LinkedIn">
+          <a
+            href="https://www.linkedin.com/in/jordan-nares-55084810a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
             in
           </a>
         </div>
@@ -181,6 +196,36 @@ function Header() {
 const projects = [
   {
     number: "01",
+    title: "BOP",
+    category: "Website redesign",
+    year: "2022",
+    preview: "/assets/bop.png",
+    description:
+      "A calm mobile healthcare experience focused on making everyday care easier to navigate.",
+    role: "Product design and UI development",
+  },
+  {
+    number: "02",
+    title: "CP App",
+    category: "Mobile Application",
+    year: "2022",
+    preview: "/assets/cp-app.png",
+    description:
+      "A calm mobile healthcare experience focused on making everyday care easier to navigate.",
+    role: "Product design and UI development",
+  },
+  {
+    number: "03",
+    title: "My Internet Support",
+    category: "Website redesign",
+    year: "2022",
+    preview: "/assets/my-internet-support.png",
+    description:
+      "A calm mobile healthcare experience focused on making everyday care easier to navigate.",
+    role: "Product design and UI development",
+  },
+  {
+    number: "04",
     title: "e-Angkat",
     category: "Mobile application",
     year: "2026",
@@ -190,7 +235,7 @@ const projects = [
     role: "Product design and UI development",
   },
   {
-    number: "02",
+    number: "05",
     title: "Beagle Tracking Solutions",
     category: "Brand & e-commerce",
     year: "2025",
@@ -200,7 +245,7 @@ const projects = [
     role: "Brand direction and e-commerce design",
   },
   {
-    number: "03",
+    number: "06",
     title: "iMove",
     category: "Website redesign",
     year: "2025",
@@ -216,10 +261,12 @@ function WorkSection() {
   const moveXRef = useRef<((value: number) => void) | null>(null);
   const moveYRef = useRef<((value: number) => void) | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
-  const [activeProject, setActiveProject] =
-    useState<typeof projects[number] | null>(null);
-  const [selectedProject, setSelectedProject] =
-    useState<typeof projects[number] | null>(null);
+  const [activeProject, setActiveProject] = useState<
+    (typeof projects)[number] | null
+  >(null);
+  const [selectedProject, setSelectedProject] = useState<
+    (typeof projects)[number] | null
+  >(null);
 
   useEffect(() => {
     if (!selectedProject) return;
@@ -281,7 +328,7 @@ function WorkSection() {
 
   const showPreview = (
     event: ReactPointerEvent<HTMLButtonElement>,
-    project: typeof projects[number],
+    project: (typeof projects)[number],
   ) => {
     if (event.pointerType === "touch") return;
     setActiveProject(project);
@@ -306,7 +353,7 @@ function WorkSection() {
     });
   };
 
-  const openProject = (project: typeof projects[number]) => {
+  const openProject = (project: (typeof projects)[number]) => {
     setActiveProject(null);
     gsap.to(previewRef.current, {
       autoAlpha: 0,
@@ -469,7 +516,15 @@ export default function App() {
         opacity: 0,
         rotate: -2,
         duration: 0.9,
-        delay: 0.75,
+        delay: 1.5,
+        ease: "back.out(1.5)",
+      });
+      gsap.from(".availability", {
+        x: -45,
+        opacity: 0,
+        rotate: -2,
+        duration: 1.5,
+        delay: 1,
         ease: "back.out(1.5)",
       });
       gsap.from(".art-mark", {
@@ -504,7 +559,7 @@ export default function App() {
         <motion.div
           className="feature-card"
           animate={{ y: [0, -8, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         >
           <span className="code-icon">
             <Braces size={26} />
@@ -522,8 +577,8 @@ export default function App() {
 
         <motion.div
           className="availability"
-          animate={{ opacity: [0.75, 1, 0.75] }}
-          transition={{ duration: 2.2, repeat: Infinity }}
+          animate={{ opacity: [0, 1, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         >
           <i /> &#123; AVAILABLE TO WORK &#125;
         </motion.div>
