@@ -196,19 +196,19 @@ function Header() {
 const projects = [
   {
     number: "01",
-    title: "BOP",
+    title: "Back Office Portal",
     category: "Website redesign",
-    year: "2022",
+    year: "2024",
     preview: "/assets/bop.png",
     description:
       "A calm mobile healthcare experience focused on making everyday care easier to navigate.",
-    role: "Product design and UI development",
+    role: "Product redesign and UI development",
   },
   {
     number: "02",
-    title: "CP App",
+    title: "Customer Portal",
     category: "Mobile Application",
-    year: "2022",
+    year: "2024",
     preview: "/assets/cp-app.png",
     description:
       "A calm mobile healthcare experience focused on making everyday care easier to navigate.",
@@ -218,17 +218,17 @@ const projects = [
     number: "03",
     title: "My Internet Support",
     category: "Website redesign",
-    year: "2022",
+    year: "2024",
     preview: "/assets/my-internet-support.png",
     description:
       "A calm mobile healthcare experience focused on making everyday care easier to navigate.",
-    role: "Product design and UI development",
+    role: "Website design and UI development",
   },
   {
     number: "04",
     title: "e-Angkat",
     category: "Mobile application",
-    year: "2026",
+    year: "2021",
     preview: "/assets/pulse-health-preview2.png",
     description:
       "A calm mobile healthcare experience focused on making everyday care easier to navigate.",
@@ -237,22 +237,21 @@ const projects = [
   {
     number: "05",
     title: "Beagle Tracking Solutions",
-    category: "Brand & e-commerce",
-    year: "2025",
+    category: "Website design",
+    year: "2021",
     preview: "/assets/common-ground-preview2.png",
     description:
       "A warm, editorial storefront for considered homeware and everyday objects.",
-    role: "Brand direction and e-commerce design",
+    role: "Website design and UI development",
   },
   {
     number: "06",
     title: "iMove",
-    category: "Website redesign",
-    year: "2025",
+    category: "Dashboard design",
+    year: "2019",
     preview: "/assets/north-studio-preview2.png",
-    description:
-      "A nature-led studio website that gives landscape projects room to speak.",
-    role: "Website redesign and UI development",
+    description: "",
+    role: "Dashboard design and UI development",
   },
 ];
 
